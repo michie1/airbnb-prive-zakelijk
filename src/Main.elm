@@ -66,16 +66,20 @@ view model =
         host =
             total - serviceFee
 
-        round = Round.round 2
+        round =
+            Round.round 2
 
-        ratio = 0.8
+        ratio =
+            0.8
 
-        vat = 0.21
+        vat =
+            0.21
 
-        huisvestigingskosten = serviceFee / ( 1 + vat ) * vat * ratio
+        vorderingOmzetbelasting =
+            serviceFee / (1 + vat) * vat * ratio
 
-        vorderingOmzetbelasting = (total * ratio) - huisvestigingskosten
-
+        huisvestigingskosten =
+            (total * ratio) - vorderingOmzetbelasting
     in
         div []
             [ div [] [ text "Airbnb privé-zakelijk calculator" ]
