@@ -1,12 +1,14 @@
 {
   "name": "airbnb-zakelijk",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "dev": "elm reactor & xdg-open http://localhost:8000/src/Main.elm"
+    "dev": "elm reactor & xdg-open http://localhost:8000/src/Main.elm",
+    "start": "electron ."
   },
   "dependencies": {
+    "electron": "^4.0.2",
     "elm": "^0.19.0-bugfix2"
   }
 }
